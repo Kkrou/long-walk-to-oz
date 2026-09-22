@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bvt8b7bndwm7p"]
+
+[ext_resource type="PackedScene" uid="uid://ch33attn7lrip" path="res://scenes/WallPost.glb" id="1_m43vb"]
+
+[sub_resource type="Animation" id="Animation_nnhni"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OmniLight3D:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_rk305"]
+resource_name = "wallpost_anim"
+length = 1440.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OmniLight3D:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 342, 342.5, 343, 343.93332, 347, 720, 725),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 3.0, 0.0, 3.0, 5.0, 5.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m8wc4"]
+_data = {
+&"RESET": SubResource("Animation_nnhni"),
+&"wallpost_anim": SubResource("Animation_rk305")
+}
+
+[node name="WallPost" unique_id=1587957940 instance=ExtResource("1_m43vb")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="2" unique_id=381231107]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10980457, -0.010858864)
+light_color = Color(1, 1, 0.6509804, 1)
+light_energy = 0.0
+light_volumetric_fog_energy = 0.3
+omni_range = 8.829
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3" unique_id=35081587]
+libraries/ = SubResource("AnimationLibrary_m8wc4")
+autoplay = &"wallpost_anim"
