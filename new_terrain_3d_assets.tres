@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cs4oa6jkuq12m" path="res://assets/textures/pathway.png" id="6_bdvu2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cf8io"]
-albedo_color = Color(0.07058824, 0.28235295, 0.07058824, 1)
+albedo_color = Color(0, 0.31764707, 0, 1)
 
 [sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_k0juu"]
 name = "grass"
@@ -62,6 +62,9 @@ image = SubResource("Image_be6xf")
 name = "grass"
 albedo_texture = ExtResource("5_be6xf")
 normal_texture = SubResource("ImageTexture_45o30")
+uv_scale = 2.0
+detiling_rotation = 1.0
+detiling_shift = 0.184
 
 [sub_resource type="Image" id="Image_bdvu2"]
 data = {
@@ -80,6 +83,7 @@ name = "packed_albedo_height"
 id = 1
 albedo_texture = ExtResource("6_bdvu2")
 normal_texture = SubResource("ImageTexture_hcakt")
+uv_scale = 0.053
 
 [resource]
 mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_k0juu"), SubResource("Terrain3DMeshAsset_y8v5c"), SubResource("Terrain3DMeshAsset_mh5kf"), SubResource("Terrain3DMeshAsset_771r3")])
