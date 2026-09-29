@@ -1,0 +1,63 @@
+[gd_resource type="Terrain3DAssets" format=3 uid="uid://7iksj3kukptg"]
+
+[ext_resource type="PackedScene" uid="uid://ce7u1duufeuak" path="res://scenes/grass.tscn" id="1_wj2b0"]
+[ext_resource type="PackedScene" uid="uid://4t1eqhjph8ie" path="res://scenes/yellowFlower.glb" id="2_h0205"]
+[ext_resource type="PackedScene" uid="uid://daxjny8ku71sq" path="res://scenes/WhiteFlower.glb" id="3_be6xf"]
+[ext_resource type="PackedScene" uid="uid://dtpm3kek36iko" path="res://scenes/purpleFlower.glb" id="4_bdvu2"]
+[ext_resource type="Texture2D" uid="uid://dmuau8drllcft" path="res://assets/grass/textures/packed_albedo_height.png" id="5_be6xf"]
+[ext_resource type="Texture2D" uid="uid://chcmbcpy3wtsd" path="res://assets/grass/textures/packed_normal_roughness.png" id="6_bdvu2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cf8io"]
+albedo_color = Color(0.15686275, 0.13725491, 0.011764706, 1)
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_k0juu"]
+name = "grass"
+scene_file = ExtResource("1_wj2b0")
+density = 1.1195652
+cast_shadows = 0
+material_override = SubResource("StandardMaterial3D_cf8io")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_y8v5c"]
+name = "yellowFlower"
+id = 1
+scene_file = ExtResource("2_h0205")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_mh5kf"]
+name = "WhiteFlower"
+id = 2
+scene_file = ExtResource("3_be6xf")
+density = 1.54
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_771r3"]
+name = "purpleFlower"
+id = 3
+scene_file = ExtResource("4_bdvu2")
+density = 1.0
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_cf8io"]
+name = "grass"
+albedo_texture = ExtResource("5_be6xf")
+normal_texture = ExtResource("6_bdvu2")
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_bdvu2"]
+name = "packed_albedo_height"
+id = 1
+albedo_color = Color(1, 0.654902, 0.28627452, 1)
+albedo_texture = ExtResource("5_be6xf")
+normal_texture = ExtResource("6_bdvu2")
+
+[resource]
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_k0juu"), SubResource("Terrain3DMeshAsset_y8v5c"), SubResource("Terrain3DMeshAsset_mh5kf"), SubResource("Terrain3DMeshAsset_771r3")])
+texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_cf8io"), SubResource("Terrain3DTextureAsset_bdvu2")])

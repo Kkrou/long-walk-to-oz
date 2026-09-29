@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Long Walk to Oz"
-run/main_scene="uid://c4c0a5ujmyr40"
+config/name="Long Walk to Oz Backup"
+run/main_scene="uid://5dtlwvgdxsh"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://script/icon.svg"
 

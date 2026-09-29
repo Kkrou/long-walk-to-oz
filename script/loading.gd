@@ -1,6 +1,6 @@
 extends Control
 @onready var progress_bar = %ProgressBar
-@onready var next_scene_path: String = "res://scenes/world.scn"
+@onready var next_scene_path: String = "res://scenes/world.tscn"
 var progress: Array[float] = []
 var loading_finished := false
 
