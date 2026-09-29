@@ -1737,7 +1737,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 169, 4, -458)
 size = Vector3(20, 10, 20)
 
 [node name="Giardino" type="CSGBox3D" parent="Ambient/Places" unique_id=1849866782]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 255, 2, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 228.07825, 2, 4)
 size = Vector3(50, 1, 50)
 
 [node name="Ponte" parent="Ambient" unique_id=1233838648 instance=ExtResource("12_kpybi")]

@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1790671973
+::res://::1790672261
 new_terrain_3d_assets.tres::Terrain3DAssets::2263197849113634200::1790671973::0::1::::<><><>0<>0<><>::uid://ce7u1duufeuak::::res://scenes/grass.tscn<>uid://4t1eqhjph8ie::::res://scenes/yellowFlower.glb<>uid://daxjny8ku71sq::::res://scenes/WhiteFlower.glb<>uid://dtpm3kek36iko::::res://scenes/purpleFlower.glb<>uid://dmuau8drllcft::::res://assets/grass/textures/packed_albedo_height.png<>uid://chcmbcpy3wtsd::::res://assets/grass/textures/packed_normal_roughness.png
 PonteFinale.glb::PackedScene::4924798598193400290::1790087008::1790103002::1::::<><><>0<>0<>ba37c155d459af9be705e2918a38edb7<>res://.godot/imported/PonteFinale.glb-cf191bff2e25a03a8f11960e9c23dc7a.scn::
 README.md::TextFile::-1::1790087008::0::1::::<><><>0<>0<><>::
@@ -9,7 +9,7 @@ LICENSE.txt::TextFile::-1::1790102965::0::1::::<><><>0<>0<><>::
 plugin.cfg::TextFile::-1::1790102965::0::1::::<><><>0<>0<><>::
 README.md::TextFile::-1::1790102965::0::1::::<><><>0<>0<><>::
 terrain.gdextension::GDExtension::2625506675569593757::1790102965::0::1::::<><><>0<>0<><>::
-::res://addons/terrain_3d/bin/::1790670893
+::res://addons/terrain_3d/bin/::1790672261
 ::res://addons/terrain_3d/bin/libterrain.macos.debug.framework/::1790102966
 ::res://addons/terrain_3d/bin/libterrain.macos.release.framework/::1790102966
 ::res://addons/terrain_3d/extras/::1790102967
@@ -99,13 +99,13 @@ rocky_terrain_02_disp_1k.png::CompressedTexture2D::189555610787715804::179052088
 rocky_terrain_02_spec_1k.png::CompressedTexture2D::6605524950760126223::1790520883::1790520883::1::::<><><>0<>0<>9c541d5a8df2ee14693c0e4146cb3ace<>res://.godot/imported/rocky_terrain_02_spec_1k.png-2a1ba128d04f01c38b34bd762bf0282c.ctex::
 rocky_terrain_rough.png::CompressedTexture2D::1955888392811761711::1790671505::1790671505::1::::<><><>0<>0<>596ed9075a4c911e5afe6943a487f652<>res://.godot/imported/rocky_terrain_rough.png-d2761f095574da77bbaaffbe4765b70e.ctex::
 ::res://long-walk-to-oz/::1790087462
-::res://scenes/::1790671960
+::res://scenes/::1790671979
 Day.tscn::PackedScene::1236378712452396553::1790087043::0::1::::<><><>0<>0<><>::uid://cuom07nm4lrfd::::res://script/shaders/stylized-sky.gdshader
 DoubleLightPost.glb::PackedScene::4848163990165585453::1790087043::1790103009::1::::<><><>0<>0<>264116971413d53c6763821ac5792c94<>res://.godot/imported/DoubleLightPost.glb-435e6ce9b173e53eff5a95a0dbea0e66.scn::
 double_light_post.tscn::PackedScene::2685320672037812016::1790087043::0::1::::<><><>0<>0<><>::uid://cbcqs12defhtd::::res://scenes/DoubleLightPost.glb
 grass.tscn::PackedScene::5120917789946810314::1790087043::0::1::::<><><>0<>0<><>::uid://baf1qhpt047gx::::res://assets/grass/Grass.glb
 loading.tscn::PackedScene::5372083641154053345::1790087043::0::1::::<><><>0<>0<><>::uid://dg8i3e4eq74ji::::res://script/loading.gd
-MainMenu.scn::PackedScene::62148026389141471::1790671960::0::1::::<><><>0<>0<><>::uid://cd6e5jdxkblq6::::res://script/main_menu.gd<>uid://cuom07nm4lrfd::::res://script/shaders/stylized-sky.gdshader<>uid://beh1k2rqboi08::::res://assets/moon.png<>uid://7iksj3kukptg::::res://new_terrain_3d_assets.tres<>uid://c3hcwgvb5h2ak::::res://script/water.gd<>uid://b5nqfkbrswhua::::res://scenes/tree_coll.tscn<>uid://skrklvc3qf7w::::res://script/shaders/pixel-art.gdshader<>uid://c1ymlkf6ahysj::::res://assets/UiTheme.tres<>uid://bquodkpeq3agt::::res://assets/OzsWizard-TinWoodman.ttf
+MainMenu.scn::PackedScene::62148026389141471::1790671973::0::1::::<><><>0<>0<><>::uid://cd6e5jdxkblq6::::res://script/main_menu.gd<>uid://cuom07nm4lrfd::::res://script/shaders/stylized-sky.gdshader<>uid://beh1k2rqboi08::::res://assets/moon.png<>uid://7iksj3kukptg::::res://new_terrain_3d_assets.tres<>uid://c3hcwgvb5h2ak::::res://script/water.gd<>uid://b5nqfkbrswhua::::res://scenes/tree_coll.tscn<>uid://skrklvc3qf7w::::res://script/shaders/pixel-art.gdshader<>uid://c1ymlkf6ahysj::::res://assets/UiTheme.tres<>uid://bquodkpeq3agt::::res://assets/OzsWizard-TinWoodman.ttf
 Night.tscn::PackedScene::810775998098561219::1790087043::0::1::::<><><>0<>0<><>::uid://cuom07nm4lrfd::::res://script/shaders/stylized-sky.gdshader<>uid://b6mfi6jqtjf87::::res://assets/shooting_star_sampler.png
 particleMagic.tscn::PackedScene::6786278968374107779::1790087043::0::1::::<><><>0<>0<><>::
 ponte_finale.tscn::PackedScene::3776000500368258011::1790087043::0::1::::<><><>0<>0<><>::uid://ccfuyixc7vwr7::::res://PonteFinale.glb
@@ -119,7 +119,7 @@ WallPost.glb::PackedScene::5323666953692375707::1790087043::1790103005::1::::<><
 wall_post.tscn::PackedScene::3901616706861673279::1790087043::0::1::::<><><>0<>0<><>::uid://ch33attn7lrip::::res://scenes/WallPost.glb
 WhiteFlower.glb::PackedScene::7207313719699658396::1790087044::1790103005::1::::<><><>0<>0<>7b3960bd1499946b606a308c12789a0a<>res://.godot/imported/WhiteFlower.glb-132adb7991801e27fc7238ca267bcd16.scn::
 world.scn::PackedScene::6813966120238933847::1790104112::0::1::::<><><>0<>0<><>::uid://bquodkpeq3agt::::res://assets/OzsWizard-TinWoodman.ttf<>uid://cuom07nm4lrfd::::res://script/shaders/stylized-sky.gdshader<>uid://beh1k2rqboi08::::res://assets/moon.png<>uid://c2t5qt4hbug3y::::res://script/Player.gd<>uid://0eevq4g0h6am::::res://script/interaction_object.gd<>uid://c3xla1y05ustv::::res://scenes/particleMagic.tscn<>uid://c3hcwgvb5h2ak::::res://script/water.gd<>uid://b5nqfkbrswhua::::res://scenes/tree_coll.tscn<>uid://6e4vcgeaiqyw::::res://scenes/single_light_post.tscn<>uid://bei13sbqua7qq::::res://scenes/double_light_post.tscn<>uid://bvt8b7bndwm7p::::res://scenes/wall_post.tscn<>uid://bt2egadsevjnv::::res://scenes/ponte_finale.tscn
-world.tscn::PackedScene::4649473241026915903::1790671925::0::1::::<><><>0<>0<><>::uid://bquodkpeq3agt::::res://assets/OzsWizard-TinWoodman.ttf<>uid://cuom07nm4lrfd::::res://script/shaders/stylized-sky.gdshader<>uid://beh1k2rqboi08::::res://assets/moon.png<>uid://baf1qhpt047gx::::res://assets/grass/Grass.glb<>uid://c2t5qt4hbug3y::::res://script/Player.gd<>uid://0eevq4g0h6am::::res://script/interaction_object.gd<>uid://dmuau8drllcft::::res://assets/grass/textures/packed_albedo_height.png<>uid://c3xla1y05ustv::::res://scenes/particleMagic.tscn<>uid://chcmbcpy3wtsd::::res://assets/grass/textures/packed_normal_roughness.png<>uid://c3hcwgvb5h2ak::::res://script/water.gd<>uid://b5nqfkbrswhua::::res://scenes/tree_coll.tscn<>uid://6e4vcgeaiqyw::::res://scenes/single_light_post.tscn<>uid://bei13sbqua7qq::::res://scenes/double_light_post.tscn<>uid://bvt8b7bndwm7p::::res://scenes/wall_post.tscn<>uid://bt2egadsevjnv::::res://scenes/ponte_finale.tscn
+world.tscn::PackedScene::4649473241026915903::1790671979::0::1::::<><><>0<>0<><>::uid://bquodkpeq3agt::::res://assets/OzsWizard-TinWoodman.ttf<>uid://cuom07nm4lrfd::::res://script/shaders/stylized-sky.gdshader<>uid://beh1k2rqboi08::::res://assets/moon.png<>uid://baf1qhpt047gx::::res://assets/grass/Grass.glb<>uid://c2t5qt4hbug3y::::res://script/Player.gd<>uid://0eevq4g0h6am::::res://script/interaction_object.gd<>uid://dmuau8drllcft::::res://assets/grass/textures/packed_albedo_height.png<>uid://c3xla1y05ustv::::res://scenes/particleMagic.tscn<>uid://chcmbcpy3wtsd::::res://assets/grass/textures/packed_normal_roughness.png<>uid://c3hcwgvb5h2ak::::res://script/water.gd<>uid://b5nqfkbrswhua::::res://scenes/tree_coll.tscn<>uid://6e4vcgeaiqyw::::res://scenes/single_light_post.tscn<>uid://bei13sbqua7qq::::res://scenes/double_light_post.tscn<>uid://bvt8b7bndwm7p::::res://scenes/wall_post.tscn<>uid://bt2egadsevjnv::::res://scenes/ponte_finale.tscn
 yellowFlower.glb::PackedScene::2076286279434133152::1790087044::1790103005::1::::<><><>0<>0<>8b69131723da464d0c7c5be08285058a<>res://.godot/imported/yellowFlower.glb-f74808b40c92a58f58adbe315d1cc9d5.scn::
 ::res://scenes/bush/::1790103005
 Bush.glb::PackedScene::4992653924549212134::1790087044::1790103005::1::::<><><>0<>0<>aa3bf16ac59d51a0afde0749fe816a73<>res://.godot/imported/Bush.glb-1f4ba2f699aa5d74c9f04cf30514fc9d.scn::
