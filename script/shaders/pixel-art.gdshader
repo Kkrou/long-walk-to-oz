@@ -3,7 +3,7 @@ render_mode unshaded;
  
 uniform sampler2D screen_texture : hint_screen_texture, filter_nearest;
 
-uniform vec2 target_resolution = vec2(1280.0, 400.0);
+uniform vec2 target_resolution = vec2(960.0, 540.0);
 uniform int range_per_color = 12;
 
 void fragment() {

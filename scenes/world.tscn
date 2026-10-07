@@ -158,8 +158,8 @@ code = "shader_type canvas_item;
 render_mode unshaded;
 
 uniform sampler2D screen_texture : hint_screen_texture, filter_nearest;
-uniform vec2 target_resolution = vec2(1280.0, 400.0);
-uniform int range_per_color = 12;
+uniform vec2 target_resolution = vec2(960.0, 540.0);
+uniform int range_per_color = 24;
 void fragment() {
     // Pixelation
     vec2 pixel_uv = floor(SCREEN_UV * target_resolution) / target_resolution;
@@ -1512,7 +1512,7 @@ transform = Transform3D(-1.818988, 0, 0.83143413, 0, 2, 0, -0.83143413, 0, -1.81
 transform = Transform3D(-0.04726074, 0, -1.9994415, 0, 2, 0, 1.9994415, 0, -0.04726074, 22.170385, 1.7727079, 271.15866)
 
 [node name="DoubleLightPost8" parent="Ambient/LightPosts" unique_id=1954027201 instance=ExtResource("10_7iits")]
-transform = Transform3D(-1.348108, 0, -1.4773645, 0, 2, 0, 1.4773645, 0, -1.348108, -29.76431, -0.018030167, 399.14078)
+transform = Transform3D(-1.348108, 0, -1.4773645, 0, 2, 0, 1.4773645, 0, -1.348108, -29.973982, -0.018030167, 399.14078)
 
 [node name="DoubleLightPost2" parent="Ambient/LightPosts" unique_id=1401341881 instance=ExtResource("10_7iits")]
 transform = Transform3D(1.5093238, 0, -1.3122281, 0, 2, 0, 1.3122281, 0, 1.5093238, -60.742645, 0.0886178, 213.38928)
