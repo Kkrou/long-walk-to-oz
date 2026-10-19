@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://0eevq4g0h6am" path="res://script/interaction_object.gd" id="5_dss4m"]
 [ext_resource type="PackedScene" uid="uid://c3xla1y05ustv" path="res://scenes/particleMagic.tscn" id="6_7t5mc"]
 [ext_resource type="Script" uid="uid://c3hcwgvb5h2ak" path="res://script/water.gd" id="7_lakw3"]
+[ext_resource type="LabelSettings" uid="uid://dxgm5c6o31g4w" path="res://assets/onScreenMsgSettings.tres" id="8_o8fc1"]
 [ext_resource type="PackedScene" uid="uid://b5nqfkbrswhua" path="res://scenes/tree_coll.tscn" id="8_pm21f"]
 [ext_resource type="PackedScene" uid="uid://6e4vcgeaiqyw" path="res://scenes/single_light_post.tscn" id="9_2lf6f"]
 [ext_resource type="PackedScene" uid="uid://bei13sbqua7qq" path="res://scenes/double_light_post.tscn" id="10_7iits"]
@@ -752,17 +753,17 @@ debug_shape_custom_color = Color(0, 0, 1, 1)
 material = SubResource("ShaderMaterial_f3sb7")
 mesh = SubResource("QuadMesh_hdwr6")
 
-[node name="interactable" type="RigidBody3D" parent="." unique_id=1797184226 groups=["interactable", "pickable"]]
+[node name="interactable-Mago" type="RigidBody3D" parent="." unique_id=1797184226 groups=["interactable", "pickable"]]
 transform = Transform3D(-0.32636848, 0, -0.9452426, 0, 1, 0, 0.9452426, 0, -0.32636848, -75.531166, 3.4826255, 426.3109)
 script = ExtResource("5_dss4m")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="interactable" unique_id=1193483368]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="interactable-Mago" unique_id=1193483368]
 mesh = SubResource("BoxMesh_cy14o")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="interactable" unique_id=443636969]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="interactable-Mago" unique_id=443636969]
 shape = SubResource("ConvexPolygonShape3D_y8v5c")
 
-[node name="Label3D" type="Label3D" parent="interactable" unique_id=1762655281]
+[node name="Label3D" type="Label3D" parent="interactable-Mago" unique_id=1762655281]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.78297806, 0)
 visible = false
 billboard = 1
@@ -771,20 +772,37 @@ text = "Press \"E\" to interact
 "
 font = ExtResource("1_q5onr")
 
-[node name="ParticleMagic" parent="interactable" unique_id=1004334859 instance=ExtResource("6_7t5mc")]
+[node name="ParticleMagic" parent="interactable-Mago" unique_id=1004334859 instance=ExtResource("6_7t5mc")]
 transform = Transform3D(-0.3263685, 0, 0.9452427, 0, 1, 0, -0.9452427, 0, -0.3263685, 0, 0.59277725, 0)
 
-[node name="interactable2" type="RigidBody3D" parent="." unique_id=1650828895 groups=["interactable", "pickable"]]
+[node name="Label" type="Label" parent="interactable-Mago" unique_id=1819529131]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -164.0
+offset_top = -11.5
+offset_right = 164.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "\"Io ho preso il primo, tu eri gia al secondo\""
+label_settings = ExtResource("8_o8fc1")
+
+[node name="interactable-28Tre" type="RigidBody3D" parent="." unique_id=1650828895 groups=["interactable", "pickable"]]
 transform = Transform3D(0.99982285, -0.01819251, 0.004832801, 0.018141342, 0.9997811, 0.010428389, -0.005021456, -0.01033887, 0.99993396, -74.94699, 3.6630697, 432.64188)
 script = ExtResource("5_dss4m")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="interactable2" unique_id=856282565]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="interactable-28Tre" unique_id=856282565]
 mesh = SubResource("BoxMesh_cy14o")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="interactable2" unique_id=1900251478]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="interactable-28Tre" unique_id=1900251478]
 shape = SubResource("ConvexPolygonShape3D_y8v5c")
 
-[node name="Label3D" type="Label3D" parent="interactable2" unique_id=317398721]
+[node name="Label3D" type="Label3D" parent="interactable-28Tre" unique_id=317398721]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.78297806, 0)
 visible = false
 billboard = 1
@@ -793,8 +811,25 @@ text = "Press \"E\" to interact
 "
 font = ExtResource("1_q5onr")
 
-[node name="ParticleMagic" parent="interactable2" unique_id=58630975 instance=ExtResource("6_7t5mc")]
+[node name="ParticleMagic" parent="interactable-28Tre" unique_id=58630975 instance=ExtResource("6_7t5mc")]
 transform = Transform3D(-0.3263685, 0, 0.9452427, 0, 1, 0, -0.9452427, 0, -0.3263685, 0, 0.59277725, 0)
+
+[node name="Label" type="Label" parent="interactable-28Tre" unique_id=1649349575]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -164.0
+offset_top = -11.5
+offset_right = 164.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "\"Che bella la nuova cameriera\""
+label_settings = ExtResource("8_o8fc1")
 
 [node name="Ambient" type="Node3D" parent="." unique_id=1568013516]
 
@@ -1722,5 +1757,5 @@ transform = Transform3D(-0.037416197, 0, -0.4960959, 0, 0.29999995, 0, 0.2976575
 libraries/ = SubResource("AnimationLibrary_1st1g")
 autoplay = &"cycle"
 
-[editable path="interactable/ParticleMagic"]
-[editable path="interactable2/ParticleMagic"]
+[editable path="interactable-Mago/ParticleMagic"]
+[editable path="interactable-28Tre/ParticleMagic"]

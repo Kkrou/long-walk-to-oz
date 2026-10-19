@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://dxgm5c6o31g4w"]
+
+[ext_resource type="FontFile" uid="uid://bquodkpeq3agt" path="res://assets/OzsWizard-TinWoodman.ttf" id="1_y33qs"]
+
+[resource]
+font = ExtResource("1_y33qs")
+font_size = 32
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 0.39215687)
