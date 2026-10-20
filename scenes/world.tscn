@@ -850,7 +850,7 @@ top_level = true
 metadata/_edit_lock_ = true
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=427814283 groups=["player"]]
-transform = Transform3D(0.9999729, -2.8383727e-05, -0.0073524583, -7.2408155e-05, 0.99990594, -0.013709268, 0.0073521566, 0.01370943, 0.99987894, 204.36179, 1.6384335, -449.7306)
+transform = Transform3D(0.9999729, -2.8383727e-05, -0.0073524583, -7.2408155e-05, 0.99990594, -0.013709268, 0.0073521566, 0.01370943, 0.99987894, 204.36179, 1.6384335, -442.0814)
 wall_min_slide_angle = 0.17453292
 script = ExtResource("4_xo05s")
 
@@ -1805,9 +1805,10 @@ transform = Transform3D(-0.037416197, 0, -0.4960959, 0, 0.29999995, 0, 0.2976575
 libraries/ = SubResource("AnimationLibrary_1st1g")
 autoplay = &"cycle"
 
-[node name="Funivia" type="AnimatableBody3D" parent="." unique_id=1693961170]
+[node name="Funivia" type="AnimatableBody3D" parent="." unique_id=1693961170 node_paths=PackedStringArray("prompt")]
 transform = Transform3D(3.7852912, 0, 0, 0, 0.47643596, 0, 0, 0, 3.4793453, 204.2718, 0.3035493, -450)
 script = ExtResource("15_xo05s")
+prompt = NodePath("Label")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Funivia" unique_id=706132790]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0.31411427, 0)
@@ -1827,7 +1828,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0.8050018, 0)
 shape = SubResource("BoxShape3D_dss4m")
 
 [node name="Label" type="Label" parent="Funivia" unique_id=954302650]
-visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
