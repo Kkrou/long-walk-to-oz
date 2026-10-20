@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bei13sbqua7qq" path="res://scenes/double_light_post.tscn" id="10_7iits"]
 [ext_resource type="PackedScene" uid="uid://bvt8b7bndwm7p" path="res://scenes/wall_post.tscn" id="11_oo54l"]
 [ext_resource type="PackedScene" uid="uid://bt2egadsevjnv" path="res://scenes/ponte_finale.tscn" id="12_kpybi"]
+[ext_resource type="Script" uid="uid://dkox2b6iulceg" path="res://scenes/funivia.gd" id="15_xo05s"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_cy14o"]
 
@@ -726,6 +727,8 @@ _data = {
 &"move": SubResource("Animation_7t5mc")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_dss4m"]
+
 [node name="World" type="Node3D" unique_id=1640494483]
 
 [node name="interactable-Mago" type="RigidBody3D" parent="." unique_id=1797184226 groups=["interactable", "pickable"]]
@@ -846,8 +849,8 @@ collision_mode = 3
 top_level = true
 metadata/_edit_lock_ = true
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=427814283]
-transform = Transform3D(0.9999729, -2.8383727e-05, -0.0073524583, -7.2408155e-05, 0.99990594, -0.013709268, 0.0073521566, 0.01370943, 0.99987894, -58.594566, 1.222044, 419.01227)
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=427814283 groups=["player"]]
+transform = Transform3D(0.9999729, -2.8383727e-05, -0.0073524583, -7.2408155e-05, 0.99990594, -0.013709268, 0.0073521566, 0.01370943, 0.99987894, 204.36179, 1.6384335, -449.7306)
 wall_min_slide_angle = 0.17453292
 script = ExtResource("4_xo05s")
 
@@ -1804,17 +1807,40 @@ autoplay = &"cycle"
 
 [node name="Funivia" type="AnimatableBody3D" parent="." unique_id=1693961170]
 transform = Transform3D(3.7852912, 0, 0, 0, 0.47643596, 0, 0, 0, 3.4793453, 204.2718, 0.3035493, -450)
+script = ExtResource("15_xo05s")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Funivia" unique_id=706132790]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0.31411427, 0)
 mesh = SubResource("BoxMesh_o8fc1")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Funivia" unique_id=787353932]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0.29877335, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0, 0.2987731, 0)
 shape = SubResource("BoxShape3D_xo05s")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Funivia" unique_id=1369252831]
 libraries/ = SubResource("AnimationLibrary_lakw3")
+
+[node name="Area3D" type="Area3D" parent="Funivia" unique_id=1991507175]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Funivia/Area3D" unique_id=1373537512]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0.8050018, 0)
+shape = SubResource("BoxShape3D_dss4m")
+
+[node name="Label" type="Label" parent="Funivia" unique_id=954302650]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -132.0
+offset_top = 215.0
+offset_right = 206.0
+offset_bottom = 248.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Press \"E\" to interact"
+label_settings = ExtResource("8_o8fc1")
 
 [editable path="interactable-Mago/ParticleMagic"]
 [editable path="interactable-28Tre/ParticleMagic"]
