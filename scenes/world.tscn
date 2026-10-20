@@ -685,6 +685,47 @@ _data = {
 &"cycle": SubResource("Animation_eb8te")
 }
 
+[sub_resource type="BoxMesh" id="BoxMesh_o8fc1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xo05s"]
+
+[sub_resource type="Animation" id="Animation_dss4m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(204.2718, 0.3035493, -450)]
+}
+
+[sub_resource type="Animation" id="Animation_7t5mc"]
+resource_name = "move"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(204.2718, 0.3035493, -450), Vector3(570.03955, 165.15547, -228.27911)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lakw3"]
+_data = {
+&"RESET": SubResource("Animation_dss4m"),
+&"move": SubResource("Animation_7t5mc")
+}
+
 [node name="World" type="Node3D" unique_id=1640494483]
 
 [node name="interactable-Mago" type="RigidBody3D" parent="." unique_id=1797184226 groups=["interactable", "pickable"]]
@@ -1760,6 +1801,20 @@ transform = Transform3D(-0.037416197, 0, -0.4960959, 0, 0.29999995, 0, 0.2976575
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1225014391]
 libraries/ = SubResource("AnimationLibrary_1st1g")
 autoplay = &"cycle"
+
+[node name="Funivia" type="AnimatableBody3D" parent="." unique_id=1693961170]
+transform = Transform3D(3.7852912, 0, 0, 0, 0.47643596, 0, 0, 0, 3.4793453, 204.2718, 0.3035493, -450)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Funivia" unique_id=706132790]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0.31411427, 0)
+mesh = SubResource("BoxMesh_o8fc1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Funivia" unique_id=787353932]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0.29877335, 0)
+shape = SubResource("BoxShape3D_xo05s")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Funivia" unique_id=1369252831]
+libraries/ = SubResource("AnimationLibrary_lakw3")
 
 [editable path="interactable-Mago/ParticleMagic"]
 [editable path="interactable-28Tre/ParticleMagic"]
