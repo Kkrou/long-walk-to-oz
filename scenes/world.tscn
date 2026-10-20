@@ -789,7 +789,9 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-text = "\"Io ho preso il primo, tu eri gia al secondo\""
+text = "                        Mago di Oz
+
+\"Io ho preso il primo, tu eri gia al secondo\""
 label_settings = ExtResource("8_o8fc1")
 
 [node name="interactable-28Tre" type="RigidBody3D" parent="." unique_id=1650828895 groups=["interactable", "pickable"]]
@@ -828,7 +830,9 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-text = "\"Che bella la nuova cameriera\""
+text = "                    28Tre
+
+\"Che bella la nuova cameriera\""
 label_settings = ExtResource("8_o8fc1")
 
 [node name="Ambient" type="Node3D" parent="." unique_id=1568013516]

@@ -84,6 +84,9 @@ name = "DirtPlane"
 id = 1
 albedo_texture = ExtResource("6_bdvu2")
 normal_texture = SubResource("ImageTexture_xyh1j")
+uv_scale = 0.125
+detiling_rotation = 0.167
+detiling_shift = 0.096
 
 [resource]
 mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_k0juu"), SubResource("Terrain3DMeshAsset_y8v5c"), SubResource("Terrain3DMeshAsset_mh5kf"), SubResource("Terrain3DMeshAsset_771r3")])
