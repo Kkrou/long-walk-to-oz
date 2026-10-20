@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bei13sbqua7qq" path="res://scenes/double_light_post.tscn" id="10_7iits"]
 [ext_resource type="PackedScene" uid="uid://bvt8b7bndwm7p" path="res://scenes/wall_post.tscn" id="11_oo54l"]
 [ext_resource type="PackedScene" uid="uid://bt2egadsevjnv" path="res://scenes/ponte_finale.tscn" id="12_kpybi"]
-[ext_resource type="Script" uid="uid://dkox2b6iulceg" path="res://scenes/funivia.gd" id="15_xo05s"]
+[ext_resource type="Script" uid="uid://dkox2b6iulceg" path="res://script/funivia.gd" id="15_xo05s"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_cy14o"]
 

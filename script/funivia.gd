@@ -16,10 +16,7 @@ func _ready() -> void:
 	area.body_entered.connect(_on_body_entered)
 	area.body_exited.connect(_on_body_exited)
 	anim.animation_finished.connect(_on_animation_finished)
-	print("prompt: ", prompt)
-	print("visible in tree: ", prompt.is_visible_in_tree())
-	print("text: '", prompt.text, "'")
-	print("rect: ", prompt.get_global_rect())
+
 
 
 func _fade_prompt(target_alpha: float) -> void:
