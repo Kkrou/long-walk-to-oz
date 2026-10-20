@@ -15,10 +15,15 @@
 [ext_resource type="PackedScene" uid="uid://bvt8b7bndwm7p" path="res://scenes/wall_post.tscn" id="11_oo54l"]
 [ext_resource type="PackedScene" uid="uid://bt2egadsevjnv" path="res://scenes/ponte_finale.tscn" id="12_kpybi"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_cy14o"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_y8v5c"]
+points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
+
 [sub_resource type="LabelSettings" id="LabelSettings_mh5kf"]
 font = ExtResource("1_q5onr")
 font_size = 32
-font_color = Color(0.6955032, 0.6955031, 0.6955031, 1)
+font_color = Color(0.9607843, 0.9529412, 0.88235295, 1)
 outline_size = 10
 outline_color = Color(0, 0, 0, 1)
 
@@ -181,11 +186,6 @@ shader_parameter/range_per_color = 12
 [sub_resource type="QuadMesh" id="QuadMesh_hdwr6"]
 size = Vector2(1280, 720)
 center_offset = Vector3(640, 360, 0)
-
-[sub_resource type="BoxMesh" id="BoxMesh_cy14o"]
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_y8v5c"]
-points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
 
 [sub_resource type="Gradient" id="Gradient_ctd04"]
 colors = PackedColorArray(0.31431612, 0.31431612, 0.3143161, 1, 1, 1, 1, 1)
@@ -687,72 +687,6 @@ _data = {
 
 [node name="World" type="Node3D" unique_id=1640494483]
 
-[node name="Memories Counter" type="Label" parent="." unique_id=279411458]
-offset_left = 915.0
-offset_top = 21.0
-offset_right = 1129.0
-offset_bottom = 90.0
-size_flags_horizontal = 4
-text = "Memories: 0
-"
-label_settings = SubResource("LabelSettings_mh5kf")
-metadata/_edit_use_anchors_ = true
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=566141166]
-environment = SubResource("Environment_frjfq")
-
-[node name="Sun" type="DirectionalLight3D" parent="." unique_id=1826062636]
-transform = Transform3D(-0.86602557, 0.48296285, -0.12940949, 0, -0.25881898, -0.9659255, -0.5000002, -0.8365161, 0.2241438, 0, 0, 0)
-light_color = Color(0.90588236, 0.7882353, 0.627451, 1)
-shadow_enabled = true
-
-[node name="Moon" type="DirectionalLight3D" parent="." unique_id=1479856499]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
-light_color = Color(0.56078434, 0.65882355, 0.8509804, 1)
-light_energy = 0.0
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Moon" unique_id=829367937]
-transform = Transform3D(1, 0, 0, 0, 0.9999999, -4.656613e-10, 0, 4.656613e-10, 0.9999999, 1298.1558, 0.00012207031, 1999.9999)
-mesh = SubResource("QuadMesh_sfsix")
-
-[node name="Terrain3D" type="Terrain3D" parent="." unique_id=372970921]
-data_directory = "res://terrain"
-material = SubResource("Terrain3DMaterial_ts3gi")
-assets = ExtResource("4_jhx03")
-collision_mode = 3
-top_level = true
-metadata/_edit_lock_ = true
-
-[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=427814283]
-transform = Transform3D(0.9999729, -2.8383727e-05, -0.0073524583, -7.2408155e-05, 0.99990594, -0.013709268, 0.0073521566, 0.01370943, 0.99987894, -58.594566, 1.222044, 419.01227)
-wall_min_slide_angle = 0.17453292
-script = ExtResource("4_xo05s")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=104136393]
-visible = false
-mesh = SubResource("CapsuleMesh_cy14o")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1605163934]
-shape = SubResource("ConvexPolygonShape3D_fj7yv")
-
-[node name="Head" type="Node3D" parent="CharacterBody3D" unique_id=854588446]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6794615, 0)
-
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Head" unique_id=1450022103]
-current = true
-
-[node name="Hand" type="Node3D" parent="CharacterBody3D/Head/Camera3D" unique_id=962138093]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.6)
-
-[node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D/Head/Camera3D" unique_id=1907559273]
-target_position = Vector3(0, 0, -4)
-collision_mask = 3
-debug_shape_custom_color = Color(0, 0, 1, 1)
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="CharacterBody3D/Head/Camera3D" unique_id=1383865977]
-material = SubResource("ShaderMaterial_f3sb7")
-mesh = SubResource("QuadMesh_hdwr6")
-
 [node name="interactable-Mago" type="RigidBody3D" parent="." unique_id=1797184226 groups=["interactable", "pickable"]]
 transform = Transform3D(-0.32636848, 0, -0.9452426, 0, 1, 0, 0.9452426, 0, -0.32636848, -75.531166, 3.4826255, 426.3109)
 script = ExtResource("5_dss4m")
@@ -834,6 +768,72 @@ text = "                    28Tre
 
 \"Che bella la nuova cameriera\""
 label_settings = ExtResource("8_o8fc1")
+
+[node name="Memories Counter" type="Label" parent="." unique_id=279411458]
+offset_left = 915.0
+offset_top = 21.0
+offset_right = 1129.0
+offset_bottom = 90.0
+size_flags_horizontal = 4
+text = "Memories: 0
+"
+label_settings = SubResource("LabelSettings_mh5kf")
+metadata/_edit_use_anchors_ = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=566141166]
+environment = SubResource("Environment_frjfq")
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=1826062636]
+transform = Transform3D(-0.86602557, 0.48296285, -0.12940949, 0, -0.25881898, -0.9659255, -0.5000002, -0.8365161, 0.2241438, 0, 0, 0)
+light_color = Color(0.90588236, 0.7882353, 0.627451, 1)
+shadow_enabled = true
+
+[node name="Moon" type="DirectionalLight3D" parent="." unique_id=1479856499]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+light_color = Color(0.56078434, 0.65882355, 0.8509804, 1)
+light_energy = 0.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Moon" unique_id=829367937]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, -4.656613e-10, 0, 4.656613e-10, 0.9999999, 1298.1558, 0.00012207031, 1999.9999)
+mesh = SubResource("QuadMesh_sfsix")
+
+[node name="Terrain3D" type="Terrain3D" parent="." unique_id=372970921]
+data_directory = "res://terrain"
+material = SubResource("Terrain3DMaterial_ts3gi")
+assets = ExtResource("4_jhx03")
+collision_mode = 3
+top_level = true
+metadata/_edit_lock_ = true
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=427814283]
+transform = Transform3D(0.9999729, -2.8383727e-05, -0.0073524583, -7.2408155e-05, 0.99990594, -0.013709268, 0.0073521566, 0.01370943, 0.99987894, -58.594566, 1.222044, 419.01227)
+wall_min_slide_angle = 0.17453292
+script = ExtResource("4_xo05s")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=104136393]
+visible = false
+mesh = SubResource("CapsuleMesh_cy14o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1605163934]
+shape = SubResource("ConvexPolygonShape3D_fj7yv")
+
+[node name="Head" type="Node3D" parent="CharacterBody3D" unique_id=854588446]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6794615, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Head" unique_id=1450022103]
+current = true
+
+[node name="Hand" type="Node3D" parent="CharacterBody3D/Head/Camera3D" unique_id=962138093]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.6)
+
+[node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D/Head/Camera3D" unique_id=1907559273]
+target_position = Vector3(0, 0, -4)
+collision_mask = 3
+debug_shape_custom_color = Color(0, 0, 1, 1)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CharacterBody3D/Head/Camera3D" unique_id=1383865977]
+material = SubResource("ShaderMaterial_f3sb7")
+mesh = SubResource("QuadMesh_hdwr6")
 
 [node name="Ambient" type="Node3D" parent="." unique_id=1568013516]
 
